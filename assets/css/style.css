@@ -343,7 +343,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 80vh;
-  background-image: url("file:///D:/DIU/Classes/SE212/storyboard/estore/eNno/assets/img/bgimage3.png");
+  background-image: url("https://raw.githubusercontent.com/ihsonnet/eStoreUI/master/assets/img/bgimage3.png?token=ALOU4STPECWVVXQATWSPO327C5MDG");
   background-repeat: no-repeat, repeat;
   background-position: top right;
   background-size: 80%;
