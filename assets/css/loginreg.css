@@ -1,0 +1,190 @@
+/**
+* Template Name: eStore - v0.1
+* Author: Injamamul Haque Sonet
+* License: https://ihsonnet.github.io/estoreUI
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #4cb297;
+}
+
+a:hover {
+  color: #2C9FC9;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+
+/* Gradient Background */
+.bg-gradient {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(140deg,#2C9FC9 35%,#4cb297 65%);
+}
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+}
+
+.back-to-top i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background: #;
+  color: #ccc;
+  transition: all 0.4s;
+}
+
+.back-to-top i:hover {
+  background: #2C9FC9;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Container
+--------------------------------------------------------------*/
+.container {
+  background-color: #e7e5e6;
+  border-radius: 25px;
+  width: 60%;
+  padding: 40px;
+  margin: 10% 20% 20% 20%;
+  align: center;
+}
+.container-reg {
+  background-color: #e7e5e6;
+  border-radius: 25px;
+  width: 60%;
+  padding: 40px;
+  margin: 10% 20% 10%;
+  vertical-align: middle;
+  align: center;
+}
+@media (max-width: 768px) {
+  .container-reg {
+    width: 80%;
+    margin: 10% 10% 10%;
+  }
+}
+.container-login {
+  background-color: #e7e5e6;
+  border-radius: 25px;
+  width: 40%;
+  padding: 40px;
+  margin: 10% 30% 20%;
+  vertical-align: middle;
+  align: center;
+}
+
+@media (max-width: 768px) {
+  .container-login {
+    width: 70%;
+    margin: 20% 15% 10%;
+  }
+}
+/* Button CSS */
+.common-btn {
+  margin-left: 25px;
+  background: #4cb297;
+  color: #fff;
+  float: right;
+  border-radius: 25px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+  border: 1px solid #cdd1d9;
+}
+
+.common-btn:hover {
+  background: #2C9FC9;
+  color: #fff;
+  border-color: #2C9FC9;
+}
+
+@media (max-width: 768px) {
+  .common-btn {
+    margin: 0 48px 0 0;
+    padding: 6px 18px;
+  }
+}
+
+/* Form CSS */
+
+label {
+  width: 120px;
+}
+
+.form-input {
+  background-color: #fff;
+  border-width: .3px;
+  width: 80%;
+  margin: 4px;
+  border-color: #adabac;
+  border-radius: 25px;
+  padding: 6px 10px 6px 10px;
+}
+
+@media (max-width: 768px) {
+  .form-input {
+    width: 90%;
+  }
+
+}
+
+.form-input-half {
+  background-color: #fff;
+  border-width: .3px;
+  width: 39%;
+  margin: 4px;
+  border-color: #adabac;
+  border-radius: 25px;
+  padding:6px 10px 6px 10px;
+}
+@media (max-width: 768px) {
+  .form-input-half {
+    width: 90%;
+  }
+
+}
+
+.form-input-log {
+  background-color: #fff;
+  border-width: .3px;
+  width: 70%;
+  margin: 4px;
+  border-color: #adabac;
+  border-radius: 25px;
+  padding: 6px 10px 6px 10px;
+}
+
+@media (max-width: 768px) {
+  .form-input-log {
+    width: 90%;
+  }
+
+}
