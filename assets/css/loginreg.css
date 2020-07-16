@@ -31,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(140deg,#2C9FC9 35%,#4cb297 65%);
+  position: sticky;
 }
 
 
