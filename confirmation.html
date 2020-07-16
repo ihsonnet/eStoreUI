@@ -36,11 +36,17 @@
     </head>
   <body class="bg-gradient">
     <div class="container">
-      <p align="center">Welcome <span id="fname"></span></p><br/>
-      <br/><p align="center">This Page is under constructions. please visit later.</p>
+      <p align="center">Welcome <span id="showfname"></span> <span id="showlname"></span></p><br/>
+      <p style="text-align:center; color:#666;">This Page is Under Construction. Plaease visit after later.</p>
       <script>
-        document.getElementById("fname").innerHTML=localStorage.getItem("fname");
+        const  fname = localStorage.getItem("fName");
+        const  lname = localStorage.getItem("lName");
+        document.getElementById("showfname").innerHTML= fname;
+        document.getElementById("showlname").innerHTML= lname;
       </script>
+      <br/>
+      <span><a style="color:#666" href="index.html">← Back To Home</a></span><input align="right" type="submit" name="reg" id="button" value="Log In" class="common-btn" onclick="logOut()"/>
+      <br/>
     </div>
 
   </body>

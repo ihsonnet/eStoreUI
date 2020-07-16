@@ -26,6 +26,7 @@
 
         <!-- Template Main CSS File -->
         <link href="assets/css/loginreg.css" rel="stylesheet">
+        <script type="text/javascript" src="assets/js/database.js"></script>
 
         <!-- =======================================================
         **
@@ -37,23 +38,25 @@
     </head>
   <body class="bg-gradient">
     <div class="container-reg">
-      <b>Registration Form</b><br/><br/>
+      <img src="assets/img/ico.png" wigth="15px" height="15px"><b style="color:#666">  Registration Form</b><br/><br/>
       <form action="confirmation.html">
         <label for="name">Your Name<t></label>
-        <input type="text" name="fname" class="form-input-half" id="fname" placeholder="First Name" />
-        <input type="text" name="lname" class="form-input-half" id="lname" placeholder="Last Mame" />
+        <input type="text" name="fname" class="form-input-half" required id="fname" placeholder="First Name" />
+        <input type="text" name="lname" class="form-input-half" required id="lname" placeholder="Last Name" />
         <br/><label for="name">Email<t></label>
-        <input type="email" name="lname" class="form-input" id="regEmail" placeholder="ex. yourname@domain.com" />
+        <input type="email" name="regEmail" class="form-input" required id="regEmail" placeholder="ex. yourname@domain.com" />
         <br/><label for="name">Password    </label>
-        <input type="password" name="lname" class="form-input-half" id="regPass" placeholder="password" />
+        <input type="password" name="regPass" class="form-input-half" required id="regPass" placeholder="password" />
         <br/><label for="name">Phone Number</label>
-        <input type="number" name="lname" class="form-input-half" id="lname" placeholder="+880" />
+        <input type="tel" name="lname" class="form-input-half" required id="lname" placeholder="+880" />
+        <br/><label for="name">Birth Date</label>
+        <input type="date" name="bDate" class="form-input-half" required id="bDate" placeholder="mm/dd/yyyy" />
         <br/><label for="name">NID Number  </label>
-        <input type="numbert" name="lname" class="form-input" id="lname" placeholder="National ID Card Number." />
+        <input type="text" name="lname" class="form-input" required id="lname" placeholder="National ID Card Number." />
         <br/><label for="name">Address     </label>
         <input type="text" name="lname" class="form-input" id="lname" placeholder="Ex. House No, Street, City, State, Country" />
-        <br/><br/><input align="right" type="submit" name="reg" value="Registration" class="common-btn" onclick="saveData();"/>
-        <br/>
+        <br/><label for="name"></label><input style="margin:10px" required="true" type="radio" id="lname"/><span> I accept all <a style="color:#2C9FC9" href="#">terms and conditions.</a></span>
+        <br/><span><a style="color:#666" href="index.html">← Back To Home</a></span><input align="right" type="submit" name="reg" value="Registration" class="common-btn" onclick="saveData()"/>
       </form>
     </div>
 

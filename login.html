@@ -26,7 +26,7 @@
 
         <!-- Template Main CSS File -->
         <link href="assets/css/loginreg.css" rel="stylesheet">
-
+        <script type="text/javascript" src="assets/js/database.js"></script>
         <!-- =======================================================
         **
         * Template Name: eStore - v0.1
@@ -37,14 +37,14 @@
     </head>
   <body class="bg-gradient">
     <div class="container-login">
-      <b>Admin Log In</b> <br/><br/>
-      <form action="confirmation.html">
+      <img src="assets/img/ico.png" wigth="15px" height="15px"><b style="color:#666">  Log In Form</b><br/><br/>
+      <form>
         <label for="name">Email</label>
-        <input type="text" name="fname" class="form-input-log" id="logEmail" data-msg="Please enter first name." />
+        <input type="text" name="fname" class="form-input-log" id="logEmail" placeholder="ex. yourname@domain.com" />
         <br/><label for="name">Password</label>
-        <input type="text" name="lname" class="form-input-log" id="logPass" data-msg="Please enter last name." />
+        <input type="password" name="lname" class="form-input-log" id="logPass" placeholder="Password" />
         <p id="error"></p>
-        <input align="right" type="submit" name="reg" value="Log In" class="common-btn" onclick="signIn();"/>
+        <br/><span><a style="color:#666" href="index.html">← Back To Home</a></span><input align="right" type="submit" name="reg" id="button" value="Log In" class="common-btn" onclick="checkData()"/>
         <br/>
       </form>
     </div>
