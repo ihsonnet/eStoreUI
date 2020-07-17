@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>eStore - Build your store in online.</title>
+        <meta content="" name="descriptison">
+        <meta content="" name="keywords">
+
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+        <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="assets/css/loginreg.css" rel="stylesheet">
+        <link href="assets/css/newstore.css" rel="stylesheet">
+
+        <!-- =======================================================
+        **
+        * Template Name: eStore - v0.1
+        * Author: Injamamul Haque Sonet
+        * License: https://ihsonnet.github.io/estoreUI
+        */
+        ======================================================== -->
+    </head>
+  <body class="bg-gradient">
+    <div class="container">
+      <p style="margin-bottom:0px;"><img src="assets/img/ico.png" wigth="20px" height="20px"><b style="color:#666"> Welcome <span id="showfname"></span> <span id="showlname"></span></b></p><br/>
+
+      <div class="storeDetails">
+        <img class="storeDimg" src="assets/img/layout.png" /><div class="storeDtext">
+        <p><b style="font-size:23px"><span id="storeName"></span></b></h5><br/><b>Category:</b> <span id="storeCat"></span><br/><b>Description:</b> <span id="storeDes"></span></p>
+    </div>
+      </div>
+      <script>
+        const  fname = localStorage.getItem("fName");
+        const  lname = localStorage.getItem("lName");
+        const storeName = localStorage.getItem("storeName");
+        const storeDes = localStorage.getItem("storeDes");
+        const storeCat = localStorage.getItem("storeCat");
+        document.getElementById("showfname").innerHTML= fname;
+        document.getElementById("showlname").innerHTML= lname;
+        document.getElementById("storeName").innerHTML= storeName;
+        document.getElementById("storeDes").innerHTML= storeDes;
+        document.getElementById("storeCat").innerHTML= storeCat;
+      </script>
+      <br/><p style="text-align:center; color:gray;">Thank You for stay with <b>eStore</b></p><br/><p style="text-align:center;margin:-25px; color:red;">This Page is Under Construction. Plaease visit after later.</p>
+      <br/><br/>
+      <a href="login.html"><input align="right" type="submit" name="reg" id="button" value="Log Out" class="common-btn"/></a><span><a style="color:#666; float:left" href="index.html">← Back To Home</a></span>
+      <br/>
+    </div>
+
+  </body>
+
+</html>

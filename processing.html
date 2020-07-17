@@ -26,7 +26,11 @@
 
         <!-- Template Main CSS File -->
         <link href="assets/css/loginreg.css" rel="stylesheet">
+        <link href="assets/css/newstore.css" rel="stylesheet">
         <script type="text/javascript" src="assets/js/database.js"></script>
+
+        <!-- Redirect code -->
+        <meta http-equiv="refresh" content="4;url=store-info.html" />
         <!-- =======================================================
         **
         * Template Name: eStore - v0.1
@@ -35,22 +39,13 @@
         */
         ======================================================== -->
     </head>
-  <body class="bg-gradient">
-    <div class="container-login">
-      <img src="assets/img/ico.png" wigth="20px" height="20px"><b style="color:#666">  Log In Form</b><br/><br/>
-      <form>
-        <label for="name">Email</label>
-        <input type="text" name="fname" class="form-input-log" id="logEmail" placeholder="ex. yourname@domain.com" />
-        <p class="error" id="errorEmail" style="font-size:15px;color:red">You entered wrong email.</p>
-        <label for="name">Password</label>
-        <input type="password" name="lname" class="form-input-log" id="logPass" placeholder="Password" />
-        <p class="error" id="errorPass" style="font-size:15px;color:red">You entered wrong password.</p>
-        <label style="margin-top:-5px;"></label><a style="color:#2C9FC9;" href="pass-recovery.html">Forgot Password?</a><br/>
-        <br/><input align="right" type="button" name="reg" id="button" value="Log In" class="common-btn" onclick="checkData()"/><span><a style="color:#666; float:left" href="index.html">← Back To Home</a></span>
-        <br/>
-      </form>
-    </div>
-
+  <body style="background-color:#E7E5E6">
+    <span> <p class="progressText"><h1 align="center"><b>Please wait a moment</b></h1><br/><h2 align="center">Your Store is Creating...</h2></p>
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
+    <script>
+      move();
+    </script>
   </body>
-
 </html>

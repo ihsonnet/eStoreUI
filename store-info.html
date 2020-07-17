@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>eStore - Build your store in online.</title>
+        <meta content="" name="descriptison">
+        <meta content="" name="keywords">
+
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+        <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="assets/css/loginreg.css" rel="stylesheet">
+        <link href="assets/css/newstore.css" rel="stylesheet">
+        <script type="text/javascript" src="assets/js/database.js"></script>
+
+        <!-- =======================================================
+        **
+        * Template Name: eStore - v0.1
+        * Author: Injamamul Haque Sonet
+        * License: https://ihsonnet.github.io/estoreUI
+        */
+        ======================================================== -->
+    </head>
+  <body class="bg-gradient">
+    <div class="container-reg">
+      <img src="assets/img/ico.png" wigth="20px" height="20px"><b style="color:#666">  Store Information</b><br/><br/>
+      <form action="dashboard.html">
+        <label for="name">Category<t></label>
+          <select id="storeCat" required class="form-input-half" name="category">
+            <option value="Furniture">Furniture</option>
+            <option value="Cloth & Fashion">Cloth & Fashion</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Others">Others</option>
+          </select>
+        <br/><span for="name">Do You have any Phisical Sore?</span><input style="margin:10px" name='radioBtn' checked type="radio" onclick="document.getElementById('isPhStore').style.display='block'"/><span>Yes</span> <input style="margin:10px" name='radioBtn' type="radio" onclick="document.getElementById('isPhStore').style.display='none'" /><span>No</span>
+        <br/><div style="margin-top:10px;" id="isPhStore"><p>Upload Store Images:</p>
+
+          <div class="uploadPhoto">
+            <input style="background: url(assets/img/upload.png);background-size: contain;border:0px;" class="upload-btn" type="file" id="defalt-btn" />
+            <!-- <button style="background: url(assets/img/upload.png);background-size: contain;border:0px;" id"custom-btn" class="upload-btn" onclick="startUpload()"></button> -->
+            <img class="upload-image" id="img" src="" alt="">
+          </div>
+          <br/><label for="name">Store Address</label><input type="text" class="form-input" id="storeAddress" placeholder="Ex. Store No, Market, Street, City, State, Country" ></div>
+        <br/><input align="right" type="submit" name="reg" value="Save & Goto Dashboard" class="common-btn" onclick="storeInfo()"/><span><a style="color:#666; float:left" href="index.html">← Back To Home</a></span>
+      <br/></form>
+    </div>
+    <script>
+      const defaltBtn = document.querySelector("#defalt-btn");
+      const customBtn = document.querySelector("#custom-btn");
+      const img = document.querySelector("#img");
+      function startUpload(){
+        defaltBtn.click();
+      }
+      defaltBtn.addEventListener("change", function(){
+        const file = this.files[0];
+        if(file){
+          const reader = new FileReader();
+          reader.onload = function(){
+            const result = reader.result;
+            img.src = result;
+          }
+        reader.readAsDataURL(file);
+        }
+      });
+
+    </script>
+    <script>
+$(document).on("click", "input[name='radioBtn']", function(){
+    thisRadio = $(this);
+    if (thisRadio.hasClass("imChecked")) {
+        thisRadio.removeClass("imChecked");
+        thisRadio.prop('checked', false);
+    } else {
+        thisRadio.prop('checked', true);
+        thisRadio.addClass("imChecked");
+    };
+})
+</script>
+  </body>
+
+</html>

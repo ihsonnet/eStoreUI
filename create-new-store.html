@@ -26,7 +26,9 @@
 
         <!-- Template Main CSS File -->
         <link href="assets/css/loginreg.css" rel="stylesheet">
+        <link href="assets/css/newstore.css" rel="stylesheet">
         <script type="text/javascript" src="assets/js/database.js"></script>
+
         <!-- =======================================================
         **
         * Template Name: eStore - v0.1
@@ -36,19 +38,19 @@
         ======================================================== -->
     </head>
   <body class="bg-gradient">
-    <div class="container-login">
-      <img src="assets/img/ico.png" wigth="20px" height="20px"><b style="color:#666">  Log In Form</b><br/><br/>
-      <form>
-        <label for="name">Email</label>
-        <input type="text" name="fname" class="form-input-log" id="logEmail" placeholder="ex. yourname@domain.com" />
-        <p class="error" id="errorEmail" style="font-size:15px;color:red">You entered wrong email.</p>
-        <label for="name">Password</label>
-        <input type="password" name="lname" class="form-input-log" id="logPass" placeholder="Password" />
-        <p class="error" id="errorPass" style="font-size:15px;color:red">You entered wrong password.</p>
-        <label style="margin-top:-5px;"></label><a style="color:#2C9FC9;" href="pass-recovery.html">Forgot Password?</a><br/>
-        <br/><input align="right" type="button" name="reg" id="button" value="Log In" class="common-btn" onclick="checkData()"/><span><a style="color:#666; float:left" href="index.html">← Back To Home</a></span>
-        <br/>
-      </form>
+    <div class="container-reg">
+      <img src="assets/img/ico.png" wigth="20px" height="20px"><b style="color:#666">  Creating New Store</b><br/><br/>
+      <form action="processing.html">
+        <label for="name">Store Title<t></label>
+        <input type="text" name="storeName" class="form-input" required id="storeName" placeholder="Your Store Name" />
+        <br/><label for="name">Descriptison<t></label>
+        <input type="text" name="storeDes" maxlength="200" title="Maximum length is 200 word." class="form-input" required id="storeDes" placeholder="Short Descriptison about Store (max. 200 words)" />
+        <br/><label for="name">Domain</label>
+        <input type="text" pattern="[a-z0-9._%+-]+.estore.com" title="subdomain must be include .estore.com" name="storeDomain" class="form-input" id="lname" placeholder="Ex. yourdomain.estore.com" required />
+        <br/><label for="name"></label>You can also add <span style="color:#2C9FC9;">Custom Domain</span> later.
+        <br/><label for="name">Template:</label><br/><div align="center"><button style="background-color:#ffc000;border-width:0px; border-clolor:red;" class="template" type="button" name="button"></button> <button style="background-color:#ff0066;border-width:0px; border-clolor:red;" class="template" type="button" name="button"></button> <button style="background-color:#7030a0;border-width:0px;border-clolor:red;" class="template" type="button" name="button"></button></div>
+        <br/><input align="right" type="submit" name="reg" value="Create Store" class="common-btn" onclick="storeData()"/><span><a style="color:#666; float:left" href="index.html">← Back To Home</a></span>
+      <br/></form>
     </div>
 
   </body>

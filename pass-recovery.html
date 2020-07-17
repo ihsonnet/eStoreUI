@@ -26,6 +26,7 @@
 
         <!-- Template Main CSS File -->
         <link href="assets/css/loginreg.css" rel="stylesheet">
+        <link href="assets/css/newstore.css" rel="stylesheet">
         <script type="text/javascript" src="assets/js/database.js"></script>
         <!-- =======================================================
         **
@@ -37,20 +38,22 @@
     </head>
   <body class="bg-gradient">
     <div class="container-login">
-      <img src="assets/img/ico.png" wigth="20px" height="20px"><b style="color:#666">  Log In Form</b><br/><br/>
+      <img src="assets/img/ico.png" wigth="20px" height="20px"><b style="color:#666"> Password Recovery</b><br/><br/>
       <form>
-        <label for="name">Email</label>
-        <input type="text" name="fname" class="form-input-log" id="logEmail" placeholder="ex. yourname@domain.com" />
+        Enter your Email to get Password -
+        <input type="text" style="margin-top:10px;" name="forEmail" class="form-input-rec" id="forEmail" placeholder="ex. yourname@domain.com" />
         <p class="error" id="errorEmail" style="font-size:15px;color:red">You entered wrong email.</p>
-        <label for="name">Password</label>
-        <input type="password" name="lname" class="form-input-log" id="logPass" placeholder="Password" />
-        <p class="error" id="errorPass" style="font-size:15px;color:red">You entered wrong password.</p>
-        <label style="margin-top:-5px;"></label><a style="color:#2C9FC9;" href="pass-recovery.html">Forgot Password?</a><br/>
-        <br/><input align="right" type="button" name="reg" id="button" value="Log In" class="common-btn" onclick="checkData()"/><span><a style="color:#666; float:left" href="index.html">← Back To Home</a></span>
+        <div class="seePass" id="seePass">
+          <p align="center">Your Password: <span id="regPass"></span></p>
+        </div>
+        <br/><input align="right" type="button" name="reg" id="button" value="See Password" class="common-btn" onclick="forgotPass()"/><span><a style="color:#666;float:left" href="login.html">← Back To LogIn</a></span>
         <br/>
       </form>
     </div>
-
+    <script>
+      const regPass = localStorage.getItem("regPass");
+      document.getElementById("regPass").innerHTML= regPass;
+    </script>
   </body>
 
 </html>
