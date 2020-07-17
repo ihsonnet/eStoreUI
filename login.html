@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title>eStore - Build your store in online.</title>
+        <title>Login | eStore - Build your store in online.</title>
         <meta content="" name="descriptison">
         <meta content="" name="keywords">
 
@@ -39,11 +39,11 @@
     <div class="container-login">
       <img src="assets/img/ico.png" wigth="20px" height="20px"><b style="color:#666">  Log In Form</b><br/><br/>
       <form>
-        <label for="name">Email</label>
-        <input type="text" name="fname" class="form-input-log" id="logEmail" placeholder="ex. yourname@domain.com" />
+        <label for="name">Email <span style="color:red">*</span></label>
+        <input type="text" required name="fname" class="form-input-log" id="logEmail" placeholder="ex. yourname@domain.com" />
         <p class="error" id="errorEmail" style="font-size:15px;color:red">You entered wrong email.</p>
-        <label for="name">Password</label>
-        <input type="password" name="lname" class="form-input-log" id="logPass" placeholder="Password" />
+        <label for="name">Password <span style="color:red">*</span></label>
+        <input type="password" required name="lname" class="form-input-log" id="logPass" placeholder="Password" />
         <p class="error" id="errorPass" style="font-size:15px;color:red">You entered wrong password.</p>
         <label style="margin-top:-5px;"></label><a style="color:#2C9FC9;" href="pass-recovery.html">Forgot Password?</a><br/>
         <br/><input align="right" type="button" name="reg" id="button" value="Log In" class="common-btn" onclick="checkData()"/><span><a style="color:#666; float:left" href="index.html">← Back To Home</a></span>

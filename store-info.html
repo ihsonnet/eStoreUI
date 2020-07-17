@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title>eStore - Build your store in online.</title>
+        <title>Store Info | eStore - Build your store in online.</title>
         <meta content="" name="descriptison">
         <meta content="" name="keywords">
 
@@ -38,10 +38,11 @@
         ======================================================== -->
     </head>
   <body class="bg-gradient">
+    <div id="regNotify" class="notification w3-animate-zoom"><img src="assets/img/right.png" height="30px"/> Your Store "<span id="storeName"></span>" is successfully created.</div>
     <div class="container-reg">
       <img src="assets/img/ico.png" wigth="20px" height="20px"><b style="color:#666">  Store Information</b><br/><br/>
       <form action="dashboard.html">
-        <label for="name">Category<t></label>
+        <label for="name">Category <span style="color:red">*</span><t></label>
           <select id="storeCat" required class="form-input-half" name="category">
             <option value="Furniture">Furniture</option>
             <option value="Cloth & Fashion">Cloth & Fashion</option>
@@ -49,7 +50,7 @@
             <option value="Grocery">Grocery</option>
             <option value="Others">Others</option>
           </select>
-        <br/><span for="name">Do You have any Phisical Sore?</span><input style="margin:10px" name='radioBtn' checked type="radio" onclick="document.getElementById('isPhStore').style.display='block'"/><span>Yes</span> <input style="margin:10px" name='radioBtn' type="radio" onclick="document.getElementById('isPhStore').style.display='none'" /><span>No</span>
+        <br/><span for="name">Do You have any Phisical Sore? <span style="color:red">*</span></span><input style="margin:10px" name='radioBtn' checked type="radio" onclick="document.getElementById('isPhStore').style.display='block'"/><span>Yes</span> <input style="margin:10px" name='radioBtn' type="radio" onclick="document.getElementById('isPhStore').style.display='none'" /><span>No</span>
         <br/><div style="margin-top:10px;" id="isPhStore"><p>Upload Store Images:</p>
 
           <div class="uploadPhoto">
@@ -61,6 +62,10 @@
         <br/><input align="right" type="submit" name="reg" value="Save & Goto Dashboard" class="common-btn" onclick="storeInfo()"/><span><a style="color:#666; float:left" href="index.html">← Back To Home</a></span>
       <br/></form>
     </div>
+    <script>
+      const storeName = localStorage.getItem("storeName");
+      document.getElementById("storeName").innerHTML= storeName;
+    </script>
     <script>
       const defaltBtn = document.querySelector("#defalt-btn");
       const customBtn = document.querySelector("#custom-btn");

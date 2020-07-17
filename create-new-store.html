@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title>eStore - Build your store in online.</title>
+        <title>Create New Store | eStore - Build your store in online.</title>
         <meta content="" name="descriptison">
         <meta content="" name="keywords">
 
@@ -38,14 +38,15 @@
         ======================================================== -->
     </head>
   <body class="bg-gradient">
+    <div id="regNotify" class="notification w3-animate-zoom"><img src="assets/img/right.png" height="30px"/> Registration Successful!</div>
     <div class="container-reg">
       <img src="assets/img/ico.png" wigth="20px" height="20px"><b style="color:#666">  Creating New Store</b><br/><br/>
       <form action="processing.html">
-        <label for="name">Store Title<t></label>
+        <label for="name">Store Title <span style="color:red">*</span><t></label>
         <input type="text" name="storeName" class="form-input" required id="storeName" placeholder="Your Store Name" />
-        <br/><label for="name">Descriptison<t></label>
+        <br/><label for="name">Descriptison <span style="color:red">*</span><t></label>
         <input type="text" name="storeDes" maxlength="200" title="Maximum length is 200 word." class="form-input" required id="storeDes" placeholder="Short Descriptison about Store (max. 200 words)" />
-        <br/><label for="name">Domain</label>
+        <br/><label for="name">Domain <span style="color:red">*</span></label>
         <input type="text" pattern="[a-z0-9._%+-]+.estore.com" title="subdomain must be include .estore.com" name="storeDomain" class="form-input" id="lname" placeholder="Ex. yourdomain.estore.com" required />
         <br/><label for="name"></label>You can also add <span style="color:#2C9FC9;">Custom Domain</span> later.
         <br/><label for="name">Template:</label><br/><div align="center"><button style="background-color:#ffc000;border-width:0px; border-clolor:red;" class="template" type="button" name="button"></button> <button style="background-color:#ff0066;border-width:0px; border-clolor:red;" class="template" type="button" name="button"></button> <button style="background-color:#7030a0;border-width:0px;border-clolor:red;" class="template" type="button" name="button"></button></div>

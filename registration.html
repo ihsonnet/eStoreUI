@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title>eStore - Build your store in online.</title>
+        <title>Registration | eStore - Build your store in online.</title>
         <meta content="" name="descriptison">
         <meta content="" name="keywords">
 
@@ -40,20 +40,20 @@
     <div class="container-reg">
       <img src="assets/img/ico.png" wigth="20px" height="20px"><b style="color:#666">  Registration Form</b><br/><br/>
       <form action="create-new-store.html">
-        <label for="name">Your Name<t></label>
+        <label for="name">Your Name <span style="color:red">*</span><t></label>
         <input type="text" name="fname" class="form-input-half" required id="fname" placeholder="First Name" />
         <input type="text" name="lname" class="form-input-half" required id="lname" placeholder="Last Name" />
-        <br/><label for="name">Email<t></label>
+        <br/><label for="name">Email <span style="color:red">*</span><t></label>
         <input type="email" name="regEmail" class="form-input" required id="regEmail" placeholder="ex. yourname@domain.com" />
-        <br/><label for="name">Password    </label>
+        <br/><label for="name">Password <span style="color:red">*</span></label>
         <input type="password" pattern=".{6,}" title="Password must contain 6 or more characters." name="regPass" class="form-input-half" required id="regPass" placeholder="password" />
-        <br/><label for="name">Phone Number</label>
+        <br/><label for="name">Phone Number <span style="color:red">*</span></label>
         <input type="tel" pattern="[+880]+[0-9]{10}" name="phnNumber" class="form-input-half" required id="phnNumber" placeholder="+880" title="Number must be in 11 digit." />
-        <br/><label for="name">Birth Date</label>
+        <br/><label for="name">Birth Date <span style="color:red">*</span></label>
         <input type="date" max="2003-12-31" name="bDate" class="form-input-half" title="User must be born before 2004." required id="bDate" placeholder="mm/dd/yyyy" />
-        <br/><label for="name">NID Number  </label>
-        <input type="number" name="lname" class="form-input" required id="lname" placeholder="National ID Card Number." />
-        <br/><label for="name">Address     </label>
+        <br/><label for="name">NID Number</label>
+        <input type="number" name="lname" class="form-input" id="lname" placeholder="National ID Card Number." />
+        <br/><label for="name">Address <span style="color:red">*</span></label>
         <input type="text" name="lname" class="form-input" id="lname" placeholder="Ex. House No, Street, City, State, Country" />
         <br/><label for="name"></label><input style="margin:10px" required type="checkbox" id="lname"/><span> I accept all <a style="color:#2C9FC9" href="#">terms and conditions</a> of eStore.</span>
         <br/><input align="right" type="submit" name="reg" value="Registration" class="common-btn" onclick="saveData()"/><span><a style="color:#666; float:left" href="index.html">← Back To Home</a></span><br/>
