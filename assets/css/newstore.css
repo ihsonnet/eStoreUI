@@ -1,0 +1,114 @@
+.template {
+  width: 150px;
+  height: 80px;
+  margin: 5px;
+  align: center;
+}
+
+.loading {
+  alogn:center;
+  height: auto;
+  width: 100%;
+  background-image: url("file:///D:/DIU/Classes/SE212/storyboard/estore/eStoreUI-master/assets/img/Loading-Bar.gif");
+}
+
+.progressText {
+  margin-top: 13%;
+  text-align: center;
+}
+
+#myProgress {
+  align: center;
+  width: 60%;
+  margin-top: 10%;
+  background-color: #666;
+  position: relative;
+  left: 20%;
+  border-width: 1px;
+  border-radius: 25px;
+}
+
+#myBar {
+  width: 1%;
+  height: 15px;
+  background-color: #43adad;
+  border-width: 1px;
+  border-radius: 25px;
+}
+#isPhStore {
+
+}
+
+.uploadPhoto {
+  align-content: center;
+  margin-left: 17%;
+  background-color: #fafafa;
+  height: 140px;
+  width: 80%;
+  border-radius: 25px;
+  border: 1px dashed #ADABAC;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .uploadPhoto {
+    margin-left:10%;
+    height: 300px;
+  }
+
+}
+
+.upload-btn {
+  vertical-align: middle;
+  margin: 20px;
+  height: 100px;
+  width: 103px;
+  justify-content: center;
+}
+.upload-image {
+  vertical-align: middle;
+  margin: 20px;
+  height: 100px;
+  border-width:2px;
+  border-color: #adadad;
+  justify-content: center;
+}
+
+.storeDetails {
+  background-color: #f9f9f9;
+  border-width: 1px;
+  border-radius: 20px;
+  height: 80%;
+  height: 230px;
+  float: none;
+}
+@media (max-width: 768px) {
+    .storeDetails {
+    background-color: #f9f9f9;
+    border-width: 1px;
+    border-radius: 20px;
+    height: 80%;
+    height: auto;
+    float: none;
+  }
+}
+.storeDimg {
+  float: left;
+  width: 40%;
+  margin: 15px;
+  border-width: 2px;
+  border-color: gray;
+  border-radius: 20px;
+}
+@media (max-width: 768px) {
+  .storeDimg {
+    width: 85%;
+  }
+
+}
+.storeDtext {
+  float: none;
+  margin: 15px;
+  padding: 15px;
+
+}

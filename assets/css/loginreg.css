@@ -75,6 +75,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10% 20% 20% 20%;
   align: center;
 }
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+    margin: 10% 10% 10%;
+  }
+}
 .container-reg {
   background-color: #e7e5e6;
   border-radius: 25px;
@@ -188,4 +194,49 @@ label {
     width: 90%;
   }
 
+}
+
+#seePass {
+  display: none;
+}
+.seePass {
+  align-self: center;
+  background-color: #fafafa;
+  border: 1.5px dashed gray;
+  border-radius: 25px;
+  width: 70%;
+  height: auto;
+  padding: 20px;
+  justify-content: center;
+  position: relative;
+  left: 16%;
+}
+.form-input-rec {
+  background-color: #fff;
+  border-width: .3px;
+  width: 70%;
+  margin: 4px;
+  border-color: #adabac;
+  border-radius: 25px;
+  padding: 6px 10px 6px 10px;
+  position: relative;
+  left: 15%;
+}
+
+@media (max-width: 768px) {
+  .form-input-rec {
+    width: 80%;
+    position: relative;
+    left: 10%;
+  }
+
+}
+#errorEmail {
+  display: none;
+}
+#errorPass {
+  display: none;
+}
+.error {
+  text-align: center;
 }
