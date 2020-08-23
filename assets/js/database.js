@@ -65,7 +65,7 @@ function checkData() {
   document.getElementById('errorPass').style.display='none';
   if(logEmail==myEmail && logPass==myPass)
   {
-    window.location.replace("dashboard.html");
+    window.location.replace("./cpanel/dashboard.html");
 
   }
   else if (logPass==myPass) {
