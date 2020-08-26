@@ -1,0 +1,109 @@
+body > table{
+    width: 80%;
+}
+
+table{
+    border-collapse: collapse;
+}
+table.list{
+    width:100%;
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    border: 1px;
+    color: #fff;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){
+    background-color: #E9ECEF;
+}
+
+
+table.list thead>tr {
+    background-color: #00B297;
+}
+
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 9px 20px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    width: 30%;
+    background-color: #00B297;
+    color: #fff;
+    padding: 9px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+select {
+  width: 100%;
+  padding: 9px 20px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+option {
+  width: 100%;
+  padding: 9px 20px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+form div.form-action-buttons{
+    text-align: right;
+}
+
+a-edit{
+    cursor: pointer;
+    color: #fff;
+    padding: 3px 5px;
+    font-size: 10px;
+    border: 1px;
+    border-radius: 4px;
+    background-color: #0070C0;
+    margin-right: 4px;
+}
+
+a-delete{
+    cursor: pointer;
+    color: #fff;
+    padding: 3px 5px;
+    font-size: 10px;
+    border: 1px;
+    border-radius: 4px;
+    background-color: #DC3545;
+    margin-right: 4px;
+}
+
+
+#empty {
+  display: block;
+}
+
+label.validation-error{
+    color:   red;
+    margin-left: 5px;
+}
+
+.hide{
+    display:none;
+}
