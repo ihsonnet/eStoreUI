@@ -28,7 +28,7 @@
     <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="author" content="ThemePixels">
 
-    <title>Customers | eStore.com</title>
+    <title>Profile | eStore.com</title>
 
     <!-- vendor css -->
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -38,10 +38,65 @@
 
 
     <!-- Bracket CSS -->
-    <link rel="stylesheet" href="css/crud.css">
     <link rel="stylesheet" href="css/bracket.css">
     <link href="../assets/css/loginreg.css" rel="stylesheet">
     <link href="../assets/css/newstore.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/crud.css">
+    <style>
+
+        .upper-container{
+        height: 150px;
+        background: #0866C6;
+        }
+
+        .image-container img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        padding: 5px;
+        transform: translate(90px,90px);
+        }
+        .lower-container{
+        height: 280px;
+        background: #FFF;
+        padding: 20px;
+        padding-top: 40px;
+        text-align: center;
+        }
+        .lower-container h3{
+        box-sizing: border-box;
+        font-size: 22px;
+        line-height: 1;
+        font-weight: bold;
+        }
+        .lower-container h4{
+        color: #0866C6;
+        font-size: 18px;
+        opacity: .6;
+        font-weight: lighter;
+        }
+        .lower-container p{
+        font-size: 16px;
+        color: gray;
+        margin-bottom: 10px;
+        }
+        .lower-container .btn{
+        padding: 12px 20px;
+        background: #0866C6;
+        border: none;
+        color: white;
+        border-radius: 30px;
+        font-size: 12px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all .3s ease-in;
+        }
+        .lower-container .btn:hover{
+        background: transparent;
+        color: #0866C6;
+        border: 2px solid #0866C6;
+        }
+    </style>
   </head>
 
   <body>
@@ -71,7 +126,7 @@
             <span class="menu-item-label">Product</span>
           </div><!-- menu-item -->
         </a><!-- br-menu-link -->
-        <a href="customers.html" class="br-menu-link  active">
+        <a href="customers.html" class="br-menu-link">
           <div class="br-menu-item">
             <i class="menu-item-icon icon ion-ios-person-outline tx-22"></i>
             <span class="menu-item-label">Customers</span>
@@ -83,7 +138,7 @@
             <span class="menu-item-label">Reports</span>
           </div><!-- menu-item -->
         </a><!-- br-menu-link -->
-        <a href="settings.html" class="br-menu-link">
+        <a href="settings.html" class="br-menu-link active">
           <div class="br-menu-item">
             <i class="menu-item-icon icon ion-ios-gear-outline tx-22"></i>
             <span class="menu-item-label">Settings</span>
@@ -189,7 +244,7 @@
             </a>
             <div class="dropdown-menu dropdown-menu-header wd-200">
               <ul class="list-unstyled user-profile-nav">
-                <li><a href="profile.html"><i class="icon ion-ios-person"></i> Edit Profile</a></li>
+                <li><a href=""><i class="icon ion-ios-person"></i> Edit Profile</a></li>
                 <li><a href=""><i class="icon ion-ios-gear"></i> Settings</a></li>
                 <li><a href="../login.html"><i class="icon ion-power"></i> Log Out</a></li>
               </ul>
@@ -200,118 +255,146 @@
     </div><!-- br-header -->
     <!-- ########## END: HEAD PANEL ########## -->
 
-    <!-- ########## START: MAIN PANEL ########## -->
-    <div class="br-mainpanel">
-      <div class="br-pageheader pd-y-15 pd-l-20">
-        <nav class="breadcrumb pd-0 mg-0 tx-12">
-          <a class="breadcrumb-item" href="../index.html">eStore</a>
-          <span class="breadcrumb-item active">Customers</span>
-        </nav>
-      </div><!-- br-pageheader -->
-          <div class="br-pagebody mg-t-5 pd-x-30">
 
-            <div class="row row-sm mg-t-20">
-              <div class="col-8">
-                <div class="card pd-0 bd-0 shadow-base">
-                  <div class="pd-x-30 pd-t-30 pd-b-15">
-                    <div class="d-flex align-items-center justify-content-between">
-                      <div>
-                        <h6 class="tx-13 tx-uppercase tx-inverse tx-semibold tx-spacing-1">Customers Info Table</h6>
-                        <p class="mg-b-0"></p>
-                      </div>
-                      <div class="tx-13">
-                        <p class="mg-b-0"><span class="square-8 rounded-circle bg-purple mg-r-10"></span> Realtime Updated</p>
-                      </div>
-                    </div><!-- d-flex -->
-                  </div>
-                  <div class="pd-x-15 pd-b-15">
+            <!-- ########## START: MAIN PANEL ########## -->
+            <div class="br-mainpanel">
+              <div class="br-pageheader pd-y-15 pd-l-20">
+                <nav class="breadcrumb pd-0 mg-0 tx-12">
+                  <a class="breadcrumb-item" href="../index.html">eStore</a>
+                  <span class="breadcrumb-item active">profile</span>
+                </nav>
+              </div><!-- br-pageheader -->
+                  <div class="br-pagebody mg-t-5 pd-x-30">
 
-                    <table class="list" id="employeeList">
-                    <thead>
-                        <tr>
-                            <th>Full Name</th>
-                            <th>CMR Code</th>
-                            <th>Phone Number</th>
-                            <th>Address</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-<div style="text-align:center;margin:8px;" id="empty">The table is empty. Please add a Customer.</div>
-                  </div>
-                </div><!-- card -->
+                    <div class="row row-sm mg-t-20">
+                      <div class="col-4">
 
 
-              </div><!-- col-9 -->
-              <div class="col-4">
+                        <div class="card bd-0 shadow-base pd-30">
+                             <div class="upper-container">
+                                <div class="image-container">
+                                   <img src="http://via.placeholder.com/64x64" />
+                                </div>
+                             </div>
+                             <div class="lower-container">
+                                <div>
+                    
+                                   <h3>
+<div id="fname">
 
+</div><div id="lname">
 
-                <div class="card bd-0 shadow-base pd-30">
-                  <h6 class="tx-13 tx-uppercase tx-inverse tx-semibold tx-spacing-1">ADD / Update Customer</h6>
-                  <p class="mg-b-25">From this section you can add / update customer info if you need.</p>
+</div>
+                                   </h3>
 
-                  <form onsubmit="event.preventDefault();onFormSubmit();">
-                    <div>
-                        <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
-                        <input type="text" name="fullName" id="fullName">
-                    </div>
-                    <div>
-                        <label>CMR Code</label>
-                        <input type="text" name="empCode" id="empCode">
-                    </div>
-                    <div>
-                        <label>Phone Number</label>
-                        <input type="text" name="salary" id="salary">
-                    </div>
-                    <div>
-                        <label>Address</label>
-                        <input type="text" name="city" id="city">
-                    </div>
-                    <div  class="form-action-buttons">
-                        <input type="submit" value="Submit">
-                    </div>
-                </form>
+                                   <p>Owner of</p><span></span><h4 id="showthename"></h4>
+                                </div>
 
-                </div><!-- card -->
+                                <div>
+                                   <p>sodales accumsan ligula. Aenean sed diam tristique,
+                                      fermentum mi nec, ornare arch.
+                                   </p>
+                                </div>
+                                <div>
+                                   <a href="#" class="btn">Facebook</a>
+                                </div>
+                             </div>
+                        </div><!-- card -->
 
 
 
-              </div><!-- col-3 -->
-            </div><!-- row -->
+                      </div><!-- col-4 -->
+
+                      <div class="col-8">
+                        <div class="card pd-0 bd-0 shadow-base">
+                          <div class="pd-x-30 pd-t-30 pd-b-15">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <div>
+                                <h6 class="tx-13 tx-uppercase tx-inverse tx-semibold tx-spacing-1">Store Info Settings</h6>
+                                <p class="mg-b-0"></p>
+                              </div>
+                              <div class="tx-13">
+                                <p class="mg-b-0"><span class="square-8 rounded-circle bg-purple mg-r-10"></span> Realtime Updated</p>
+                              </div>
+                            </div><!-- d-flex -->
+                          </div>
+                          <div class="pd-x-15 pd-b-15">
+                            <form>
+                              <div>
+                                  <label>Store Name</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                                  <input id="" type="text" name="" >
+                              </div>
+                              <div>
+                                <label for="name">Category</label>
+                                  <select id="storeCat" name="category">
+                                    <option value="Furniture">Furniture</option>
+                                    <option value="Cloth & Fashion">Cloth & Fashion</option>
+                                    <option value="Electronics">Electronics</option>
+                                    <option value="Grocery">Grocery</option>
+                                    <option value="Others">Others</option>
+                                  </select>
+                              </div>
+
+                              <div>
+                                  <label>Description:</label>
+                                  <!-- <input type="text" name="city" id="city"> -->
+                                  <input type="text" name="productCode" id="productCode">
+                              </div>
+
+                              <div>
+                                  <label>Address</label>
+                                  <input type="text" name="productPrice" id="productPrice">
+                              </div>
+
+                              <div  class="form-action-buttons">
+                                <button type="submit" onclick="UpdatestoreData()">Update</button>
+                              </div>
+                          </form>
+
+                          </div>
+                        </div><!-- card -->
 
 
-      </div><!-- br-pagebody -->
-      <footer class="br-footer">
-        <div class="footer-left">
-          <div class="mg-b-2">Copyright &copy; 2017.<b>eStore</b> All Rights Reserved.<span style="display:none;" id="showlname"></span> <span id="showlname"></div>
+                      </div><!-- col-9 -->
 
-          <script>
-            const  fname = localStorage.getItem("fName");
-            const  lname = localStorage.getItem("lName");
-            const storeName = localStorage.getItem("storeName");
-            const storeDes = localStorage.getItem("storeDes");
-            const storeCat = localStorage.getItem("storeCat");
-            const storen = localStorage.getItem("storeName");
-            document.getElementById("showfname").innerHTML= fname;
-            document.getElementById("showlname").innerHTML= lname;
-            document.getElementById("StoreName").innerHTML= storeName;
-            document.getElementById("storeDes").innerHTML= storeDes;
-            document.getElementById("storeCat").innerHTML= storeCat;
-            document.getElementById("showName").innerHTML = storen;
-            document.getElementById("storeTitle").innerHTML= "Dashboard | "+StoreName;
-          </script>
-        </div>
-        <div class="footer-right d-flex align-items-center">
-          <span class="tx-uppercase mg-r-10">Share:</span>
-          <a target="_blank" class="pd-x-5" href="https://www.facebook.com/"><i class="fa fa-facebook tx-20"></i></a>
-          <a target="_blank" class="pd-x-5" href="https://twitter.com/home/"><i class="fa fa-twitter tx-20"></i></a>
-        </div>
-      </footer>
-    </div><!-- br-mainpanel -->
-    <!-- ########## END: MAIN PANEL ########## -->
+                    </div><!-- row -->
+
+
+              </div><!-- br-pagebody -->
+              <footer class="br-footer">
+                <div class="footer-left">
+                  <div class="mg-b-2">Copyright &copy; 2017.<b>eStore</b> All Rights Reserved.<span style="display:none;" id="showlname"></span> <span id="showlname"></div>
+
+                  <script>
+                    const  fname = localStorage.getItem("fName");
+                    const  lname = localStorage.getItem("lName");
+                    const  firstname = localStorage.getItem("fName");
+                    const  lastname = localStorage.getItem("lName");
+                    const storeName = localStorage.getItem("storeName");
+                    const thestoreName = localStorage.getItem("storeName");
+                    const storeDes = localStorage.getItem("storeDes");
+                    const storeCat = localStorage.getItem("storeCat");
+                    const storen = localStorage.getItem("storeName");
+                    document.getElementById("showfname").innerHTML= fname;
+                    document.getElementById("showlname").innerHTML= lname;
+                    document.getElementById("fname").innerHTML= firstname;
+                    document.getElementById("lname").innerHTML= lastname;
+                    document.getElementById("showthename").innerHTML= thestoreName;
+                    document.getElementById("StoreName").innerHTML= storeName;
+                    document.getElementById("storeDes").innerHTML= storeDes;
+                    document.getElementById("storeCat").innerHTML= storeCat;
+                    document.getElementById("showName").innerHTML = storen;
+                    document.getElementById("storeTitle").innerHTML= "Dashboard | "+StoreName;
+                  </script>
+                </div>
+                <div class="footer-right d-flex align-items-center">
+                  <span class="tx-uppercase mg-r-10">Share:</span>
+                  <a target="_blank" class="pd-x-5" href="https://www.facebook.com/"><i class="fa fa-facebook tx-20"></i></a>
+                  <a target="_blank" class="pd-x-5" href="https://twitter.com/home/"><i class="fa fa-twitter tx-20"></i></a>
+                </div>
+              </footer>
+            </div><!-- br-mainpanel -->
+            <!-- ########## END: MAIN PANEL ########## -->
 
     <script src="lib/jquery/jquery.js"></script>
     <script src="lib/popper.js/popper.js"></script>
@@ -323,6 +406,6 @@
     <script src="lib/peity/jquery.peity.js"></script>
 
     <script src="js/bracket.js"></script>
-    <script src="js/customer-script.js"></script>
+    <script src="js/settings.js"></script>
   </body>
 </html>
