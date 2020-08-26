@@ -30,7 +30,7 @@ table.list thead>tr {
     background-color: #00B297;
 }
 
-input[type=text], input[type=number] {
+input[type=text], input[type=number],input[type=email] ,input[type=tel], input[type=password] {
     width: 100%;
     padding: 9px 20px;
     margin: 5px 0;
@@ -40,7 +40,7 @@ input[type=text], input[type=number] {
     box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=submit]{
     width: 30%;
     background-color: #00B297;
     color: #fff;
@@ -128,4 +128,22 @@ label.validation-error{
 
 .hide{
     display:none;
+}
+
+
+.pop-up {
+  position: fixed;
+  width: 40%;
+  margin: auto;
+  top: 15%;
+  margin-left: 22%;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 3px;
+}
+
+#edit-profile {
+  display: block;
 }

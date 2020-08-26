@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="css/bracket.css">
     <link href="../assets/css/loginreg.css" rel="stylesheet">
     <link href="../assets/css/newstore.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/crudnot.css">
   </head>
 
   <body>
@@ -525,6 +526,23 @@
         </div><!-- row -->
 
       </div><!-- br-pagebody -->
+
+      <!-- <div id="edit-profile" class="pop-up bd-0 shadow-base pd-30">
+        <img src="../assets/img/ico.png" wigth="20px" height="20px"><b style="color:#666"> Edit Profile</b><br/><br/>
+        <form>
+          <label for="name">Your Name <span style="color:red">*</span><t></label>
+          <input type="text" name="fname" class="form-input-half" id="fname" placeholder="First Name" />
+          <input type="text" name="lname" class="form-input-half"id="lname" placeholder="Last Name" />
+          <br/><label for="name">Email <span style="color:red">*</span><t></label>
+          <input type="email" name="regEmail" class="form-input" id="regEmail" placeholder="ex. yourname@domain.com" />
+          <br/><label for="name">Password <span style="color:red">*</span></label>
+          <input type="password" pattern=".{6,}" title="Password must contain 6 or more characters." name="regPass" class="form-input-half"  id="regPass" placeholder="password" />
+          <br/><label for="name">Phone Number <span style="color:red">*</span></label>
+          <input type="tel" pattern="[+880]+[0-9]{10}" name="phnNumber" class="form-input-half" id="phnNumber" placeholder="+880" title="Number must be in 11 digit." />
+          <br/>
+          <button  onclick="exiteditProfile()">Cencel<button> <input style="margin-left:5px;" type="submit" name="reg" value="Registration" class="common-btn" onclick="saveData()"/><br/>
+        </form>
+      </div> -->
       <footer class="br-footer">
         <div class="footer-left">
           <div class="mg-b-2">Copyright &copy; 2020.<b>eStore</b> All Rights Reserved.<span style="display:none;" id="showlname"></span> <span id="showlname"></div>
@@ -564,5 +582,6 @@
     <script src="lib/peity/jquery.peity.js"></script>
 
     <script src="js/bracket.js"></script>
+    <script src="js/profile.js"></script>
   </body>
 </html>
