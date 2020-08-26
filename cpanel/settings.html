@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="css/bracket.css">
     <link href="../assets/css/loginreg.css" rel="stylesheet">
     <link href="../assets/css/newstore.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/crud.css">
   </head>
 
   <body>
@@ -199,48 +200,122 @@
     </div><!-- br-header -->
     <!-- ########## END: HEAD PANEL ########## -->
 
-    <!-- ########## START: MAIN PANEL ########## -->
-    <div class="br-mainpanel">
-      <div class="br-pageheader pd-y-15 pd-l-20">
-        <nav class="breadcrumb pd-0 mg-0 tx-12">
-          <a class="breadcrumb-item" href="../index.html">eStore</a>
-          <span class="breadcrumb-item active">Settings</span>
-        </nav>
-      </div><!-- br-pageheader -->
-      <div class="pd-30">
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <!-- ########## START: MAIN PANEL ########## -->
+            <div class="br-mainpanel">
+              <div class="br-pageheader pd-y-15 pd-l-20">
+                <nav class="breadcrumb pd-0 mg-0 tx-12">
+                  <a class="breadcrumb-item" href="../index.html">eStore</a>
+                  <span class="breadcrumb-item active">Settings</span>
+                </nav>
+              </div><!-- br-pageheader -->
+                  <div class="br-pagebody mg-t-5 pd-x-30">
+
+                    <div class="row row-sm mg-t-20">
+                      <div class="col-8">
+                        <div class="card pd-0 bd-0 shadow-base">
+                          <div class="pd-x-30 pd-t-30 pd-b-15">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <div>
+                                <h6 class="tx-13 tx-uppercase tx-inverse tx-semibold tx-spacing-1">Store Info Settings</h6>
+                                <p class="mg-b-0"></p>
+                              </div>
+                              <div class="tx-13">
+                                <p class="mg-b-0"><span class="square-8 rounded-circle bg-purple mg-r-10"></span> Realtime Updated</p>
+                              </div>
+                            </div><!-- d-flex -->
+                          </div>
+                          <div class="pd-x-15 pd-b-15">
+                            <form>
+                              <div>
+                                  <label>Store Name</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                                  <input id="Storename" type="text" name="storeName" >
+                              </div>
+                              <div>
+                                <label for="name">Category</label>
+                                  <select id="storeCat" name="category">
+                                    <option value="Furniture">Furniture</option>
+                                    <option value="Cloth & Fashion">Cloth & Fashion</option>
+                                    <option value="Electronics">Electronics</option>
+                                    <option value="Grocery">Grocery</option>
+                                    <option value="Others">Others</option>
+                                  </select>
+                              </div>
+
+                              <div>
+                                  <label>Description:</label>
+                                  <!-- <input type="text" name="city" id="city"> -->
+                                  <input type="text" name="productCode" id="productCode">
+                              </div>
+
+                              <div>
+                                  <label>Address</label>
+                                  <input type="text" name="productPrice" id="productPrice">
+                              </div>
+
+                              <div  class="form-action-buttons">
+                                <button type="submit" onclick="UpdatestoreData()">Update</button>
+                              </div>
+                          </form>
+
+                          </div>
+                        </div><!-- card -->
 
 
-      </div><!-- br-pagebody -->
-      <footer class="br-footer">
-        <div class="footer-left">
-          <div class="mg-b-2">Copyright &copy; 2017.<b>eStore</b> All Rights Reserved.<span style="display:none;" id="showlname"></span> <span id="showlname"></div>
+                      </div><!-- col-9 -->
+                      <div class="col-4">
 
-          <script>
-            const  fname = localStorage.getItem("fName");
-            const  lname = localStorage.getItem("lName");
-            const storeName = localStorage.getItem("storeName");
-            const storeDes = localStorage.getItem("storeDes");
-            const storeCat = localStorage.getItem("storeCat");
-            const storen = localStorage.getItem("storeName");
-            document.getElementById("showfname").innerHTML= fname;
-            document.getElementById("showlname").innerHTML= lname;
-            document.getElementById("StoreName").innerHTML= storeName;
-            document.getElementById("storeDes").innerHTML= storeDes;
-            document.getElementById("storeCat").innerHTML= storeCat;
-            document.getElementById("showName").innerHTML = storen;
-            document.getElementById("storeTitle").innerHTML= "Dashboard | "+StoreName;
-          </script>
-        </div>
-        <div class="footer-right d-flex align-items-center">
-          <span class="tx-uppercase mg-r-10">Share:</span>
-          <a target="_blank" class="pd-x-5" href="https://www.facebook.com/"><i class="fa fa-facebook tx-20"></i></a>
-          <a target="_blank" class="pd-x-5" href="https://twitter.com/home/"><i class="fa fa-twitter tx-20"></i></a>
-        </div>
-      </footer>
-    </div><!-- br-mainpanel -->
-    <!-- ########## END: MAIN PANEL ########## -->
+
+                        <div class="card bd-0 shadow-base pd-30">
+                          <h6 class="tx-13 tx-uppercase tx-inverse tx-semibold tx-spacing-1">Change Template</h6>
+                          <p class="mg-b-25">From this section you can Change the template of your Store.</p>
+
+                          <form>
+                            <label for="name"></label><br/><div align="center"><button style="background-color:#ffc000;border-width:0px; border-clolor:red;" class="template" type="button" name="button">Template 1</button> <button style="background-color:#ff0066;border-width:0px; border-clolor:red;" active class="template" type="button" name="button">Template 2</button> <button style="background-color:#7030a0;border-width:0px;border-clolor:red;" class="template" type="button" name="button">Template 3</button></div>
+                            <br/>
+
+                            <div  class="form-action-buttons">
+                              <button id="submit" onclick="addBtn()">Add Item</button>
+                            </div>
+                        </form>
+
+                        </div><!-- card -->
+
+
+
+                      </div><!-- col-3 -->
+                    </div><!-- row -->
+
+
+              </div><!-- br-pagebody -->
+              <footer class="br-footer">
+                <div class="footer-left">
+                  <div class="mg-b-2">Copyright &copy; 2017.<b>eStore</b> All Rights Reserved.<span style="display:none;" id="showlname"></span> <span id="showlname"></div>
+
+                  <script>
+                    const  fname = localStorage.getItem("fName");
+                    const  lname = localStorage.getItem("lName");
+                    const storeName = localStorage.getItem("storeName");
+                    const storeDes = localStorage.getItem("storeDes");
+                    const storeCat = localStorage.getItem("storeCat");
+                    const storen = localStorage.getItem("storeName");
+                    document.getElementById("showfname").innerHTML= fname;
+                    document.getElementById("showlname").innerHTML= lname;
+                    document.getElementById("StoreName").innerHTML= storeName;
+                    document.getElementById("storeDes").innerHTML= storeDes;
+                    document.getElementById("storeCat").innerHTML= storeCat;
+                    document.getElementById("showName").innerHTML = storen;
+                    document.getElementById("storeTitle").innerHTML= "Dashboard | "+StoreName;
+                  </script>
+                </div>
+                <div class="footer-right d-flex align-items-center">
+                  <span class="tx-uppercase mg-r-10">Share:</span>
+                  <a target="_blank" class="pd-x-5" href="https://www.facebook.com/"><i class="fa fa-facebook tx-20"></i></a>
+                  <a target="_blank" class="pd-x-5" href="https://twitter.com/home/"><i class="fa fa-twitter tx-20"></i></a>
+                </div>
+              </footer>
+            </div><!-- br-mainpanel -->
+            <!-- ########## END: MAIN PANEL ########## -->
 
     <script src="lib/jquery/jquery.js"></script>
     <script src="lib/popper.js/popper.js"></script>
@@ -252,5 +327,6 @@
     <script src="lib/peity/jquery.peity.js"></script>
 
     <script src="js/bracket.js"></script>
+    <script src="js/settings.js"></script>
   </body>
 </html>
