@@ -39,6 +39,7 @@
 
     <!-- Bracket CSS -->
     <link rel="stylesheet" href="css/bracket.css">
+    <link rel="stylesheet" href="css/crud.css">
     <link href="../assets/css/loginreg.css" rel="stylesheet">
     <link href="../assets/css/newstore.css" rel="stylesheet">
   </head>
@@ -199,48 +200,128 @@
     </div><!-- br-header -->
     <!-- ########## END: HEAD PANEL ########## -->
 
-    <!-- ########## START: MAIN PANEL ########## -->
-    <div class="br-mainpanel">
-      <div class="br-pageheader pd-y-15 pd-l-20">
-        <nav class="breadcrumb pd-0 mg-0 tx-12">
-          <a class="breadcrumb-item" href="../index.html">eStore</a>
-          <span class="breadcrumb-item active">Product</span>
-        </nav>
-      </div><!-- br-pageheader -->
-      <div class="pd-30">
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <!-- ########## START: MAIN PANEL ########## -->
+        <div class="br-mainpanel">
+          <div class="br-pageheader pd-y-15 pd-l-20">
+            <nav class="breadcrumb pd-0 mg-0 tx-12">
+              <a class="breadcrumb-item" href="../index.html">eStore</a>
+              <span class="breadcrumb-item active">Product</span>
+            </nav>
+          </div><!-- br-pageheader -->
+              <div class="br-pagebody mg-t-5 pd-x-30">
+
+                <div class="row row-sm mg-t-20">
+                  <div class="col-8">
+                    <div class="card pd-0 bd-0 shadow-base">
+                      <div class="pd-x-30 pd-t-30 pd-b-15">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <div>
+                            <h6 class="tx-13 tx-uppercase tx-inverse tx-semibold tx-spacing-1">Product Table</h6>
+                            <p class="mg-b-0"></p>
+                          </div>
+                          <div class="tx-13">
+                            <p class="mg-b-0"><span class="square-8 rounded-circle bg-purple mg-r-10"></span> Realtime Updated</p>
+                          </div>
+                        </div><!-- d-flex -->
+                      </div>
+                      <div class="pd-x-15 pd-b-15">
+
+                        <table class="list" id="employeeList">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>PDT Code</th>
+                                <th>Price</th>
+                                <th>Category</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+    <div style="text-align:center;margin:8px;" id="empty">The table is empty. please add some product.</div>
+                      </div>
+                    </div><!-- card -->
 
 
-      </div><!-- br-pagebody -->
-      <footer class="br-footer">
-        <div class="footer-left">
-          <div class="mg-b-2">Copyright &copy; 2017.<b>eStore</b> All Rights Reserved.<span style="display:none;" id="showlname"></span> <span id="showlname"></div>
+                  </div><!-- col-9 -->
+                  <div class="col-4">
 
-          <script>
-            const  fname = localStorage.getItem("fName");
-            const  lname = localStorage.getItem("lName");
-            const storeName = localStorage.getItem("storeName");
-            const storeDes = localStorage.getItem("storeDes");
-            const storeCat = localStorage.getItem("storeCat");
-            const storen = localStorage.getItem("storeName");
-            document.getElementById("showfname").innerHTML= fname;
-            document.getElementById("showlname").innerHTML= lname;
-            document.getElementById("StoreName").innerHTML= storeName;
-            document.getElementById("storeDes").innerHTML= storeDes;
-            document.getElementById("storeCat").innerHTML= storeCat;
-            document.getElementById("showName").innerHTML = storen;
-            document.getElementById("storeTitle").innerHTML= "Dashboard | "+StoreName;
-          </script>
-        </div>
-        <div class="footer-right d-flex align-items-center">
-          <span class="tx-uppercase mg-r-10">Share:</span>
-          <a target="_blank" class="pd-x-5" href="https://www.facebook.com/"><i class="fa fa-facebook tx-20"></i></a>
-          <a target="_blank" class="pd-x-5" href="https://twitter.com/home/"><i class="fa fa-twitter tx-20"></i></a>
-        </div>
-      </footer>
-    </div><!-- br-mainpanel -->
-    <!-- ########## END: MAIN PANEL ########## -->
+
+                    <div class="card bd-0 shadow-base pd-30">
+                      <h6 class="tx-13 tx-uppercase tx-inverse tx-semibold tx-spacing-1">ADD / Update Product</h6>
+                      <p class="mg-b-25">From this section you can add new product and update if you need.</p>
+
+                      <form onsubmit="event.preventDefault();onFormSubmit();">
+                        <div>
+                            <label>Product Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                            <input type="text" name="fullName" id="fullName">
+                        </div>
+                        <div>
+                            <label>PDT Code</label>
+                            <input type="text" name="empCode" id="empCode">
+                        </div>
+
+                        <div>
+                            <label>Category</label>
+                            <!-- <input type="text" name="city" id="city"> -->
+                            <select type="text" id="city" name="city">
+                               <option value="volvo">Furniture</option>
+                               <option value="saab">Notebook / Laptop</option>
+                               <option value="fiat" selected>Grocery Items</option>
+                               <option value="audi">Clothing & Fasion</option>
+                             </select>
+                        </div>
+
+                        <div>
+                            <label>Price</label>
+                            <input type="text" name="salary" id="salary">
+                        </div>
+
+                        <div  class="form-action-buttons">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+
+                    </div><!-- card -->
+
+
+
+                  </div><!-- col-3 -->
+                </div><!-- row -->
+
+
+          </div><!-- br-pagebody -->
+          <footer class="br-footer">
+            <div class="footer-left">
+              <div class="mg-b-2">Copyright &copy; 2017.<b>eStore</b> All Rights Reserved.<span style="display:none;" id="showlname"></span> <span id="showlname"></div>
+
+              <script>
+                const  fname = localStorage.getItem("fName");
+                const  lname = localStorage.getItem("lName");
+                const storeName = localStorage.getItem("storeName");
+                const storeDes = localStorage.getItem("storeDes");
+                const storeCat = localStorage.getItem("storeCat");
+                const storen = localStorage.getItem("storeName");
+                document.getElementById("showfname").innerHTML= fname;
+                document.getElementById("showlname").innerHTML= lname;
+                document.getElementById("StoreName").innerHTML= storeName;
+                document.getElementById("storeDes").innerHTML= storeDes;
+                document.getElementById("storeCat").innerHTML= storeCat;
+                document.getElementById("showName").innerHTML = storen;
+                document.getElementById("storeTitle").innerHTML= "Dashboard | "+StoreName;
+              </script>
+            </div>
+            <div class="footer-right d-flex align-items-center">
+              <span class="tx-uppercase mg-r-10">Share:</span>
+              <a target="_blank" class="pd-x-5" href="https://www.facebook.com/"><i class="fa fa-facebook tx-20"></i></a>
+              <a target="_blank" class="pd-x-5" href="https://twitter.com/home/"><i class="fa fa-twitter tx-20"></i></a>
+            </div>
+          </footer>
+        </div><!-- br-mainpanel -->
+        <!-- ########## END: MAIN PANEL ########## -->
 
     <script src="lib/jquery/jquery.js"></script>
     <script src="lib/popper.js/popper.js"></script>
@@ -252,5 +333,6 @@
     <script src="lib/peity/jquery.peity.js"></script>
 
     <script src="js/bracket.js"></script>
+    <script src="js/product-script.js"></script>
   </body>
 </html>
