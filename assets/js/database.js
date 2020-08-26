@@ -24,7 +24,7 @@ function storeData() {
   return;
 }
 function storeInfo() {
-  let storeName,storeDes;
+  let storeAddress,storeDes;
   storeCat = document.getElementById("storeCat").value;
   storeAdress = document.getElementById("storeAddress").value;
 
