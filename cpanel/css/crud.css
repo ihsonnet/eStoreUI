@@ -40,8 +40,19 @@ input[type=text], input[type=number] {
     box-sizing: border-box;
 }
 
-input[type=submit]{
+input-b{
     width: 30%;
+    background-color: #00B297;
+    color: #fff;
+    padding: 9px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button {
+    width: 40%;
     background-color: #00B297;
     color: #fff;
     padding: 9px 20px;
@@ -96,7 +107,7 @@ a-delete{
 
 
 #empty {
-  display: block;
+  display: none;
 }
 
 label.validation-error{

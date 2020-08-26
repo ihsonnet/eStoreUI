@@ -44,7 +44,7 @@
     <link href="../assets/css/newstore.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body onload="init()">
 
     <!-- ########## START: LEFT PANEL ########## -->
     <div class="br-logo"><a href=""><img style="width:150px; margin-left:10%" src="img/logo.png"></a></div>
@@ -227,7 +227,7 @@
                       </div>
                       <div class="pd-x-15 pd-b-15">
 
-                        <table class="list" id="employeeList">
+                        <table class="list">
                         <thead>
                             <tr>
                                 <th>Product Name</th>
@@ -237,7 +237,7 @@
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="tablerows">
 
                         </tbody>
                     </table>
@@ -254,20 +254,20 @@
                       <h6 class="tx-13 tx-uppercase tx-inverse tx-semibold tx-spacing-1">ADD / Update Product</h6>
                       <p class="mg-b-25">From this section you can add new product and update if you need.</p>
 
-                      <form onsubmit="event.preventDefault();onFormSubmit();">
+                      <form>
                         <div>
                             <label>Product Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
-                            <input type="text" name="fullName" id="fullName">
+                            <input type="text" name="productName" id="productName">
                         </div>
                         <div>
                             <label>PDT Code</label>
-                            <input type="text" name="empCode" id="empCode">
+                            <input type="text" name="productCode" id="productCode">
                         </div>
 
                         <div>
                             <label>Category</label>
                             <!-- <input type="text" name="city" id="city"> -->
-                            <select type="text" id="city" name="city">
+                            <select type="text" id="productCategory" name="productCategory">
                                <option value="Furniture">Furniture</option>
                                <option value="Notebook / Laptop">Notebook / Laptop</option>
                                <option value="Grocery Items" selected>Grocery Items</option>
@@ -277,11 +277,11 @@
 
                         <div>
                             <label>Price</label>
-                            <input type="text" name="salary" id="salary">
+                            <input type="text" name="productPrice" id="productPrice">
                         </div>
 
                         <div  class="form-action-buttons">
-                            <input type="submit" value="Submit">
+                          <button id="submit" onclick="addBtn()">Add Item</button>
                         </div>
                     </form>
 
@@ -333,6 +333,6 @@
     <script src="lib/peity/jquery.peity.js"></script>
 
     <script src="js/bracket.js"></script>
-    <script src="js/product-script.js"></script>
+    <script src="js/product-crud.js"></script>
   </body>
 </html>
