@@ -30,12 +30,14 @@ function addBtn() {
 function prepareTableCell(index, productName, productCode, productPrice, productCategory) {
   var table = document.getElementById("tablerows");
   var row = table.insertRow();
-  var productNameCell = row.insertCell(0);
-  var productCodeCell = row.insertCell(1);
-  var productPriceCell = row.insertCell(2);
-  var productCategoryCell = row.insertCell(3);
-  var actionCell = row.insertCell(4);
+  var productIdCell = row.insertCell(0);
+  var productNameCell = row.insertCell(1);
+  var productCodeCell = row.insertCell(2);
+  var productPriceCell = row.insertCell(3);
+  var productCategoryCell = row.insertCell(4);
+  var actionCell = row.insertCell(5);
 
+  productIdCell.innerHTML = index;
   productNameCell.innerHTML = productName;
   productCodeCell.innerHTML = productCode;
   productPriceCell.innerHTML = productPrice;

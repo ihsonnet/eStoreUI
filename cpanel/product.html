@@ -213,6 +213,53 @@
 
                 <div class="row row-sm mg-t-20">
                   <div class="col-8">
+
+                    <div class="card pd-0 bd-0 shadow-base">
+
+                      <div class="pd-x-15 pd-b-15">
+                        <br/>
+                        <form>
+                          <table class="list">
+                          <tbody>
+                            <tr>
+                                <td>
+                                  <label>Product ID*</label>
+                                  <input type="number"  required name="Id" id="Id">
+                                </td>
+                                <td>
+                                  <label>PDT Code</label>
+                                  <input type="text" required name="productId" id="productId">
+                                </td>
+                                <td>
+                                  <label>Customer Name</label>
+                                  <input type="text" required name="productId" id="productId">
+                                </td>
+                                <td>
+                                    <label style="color:white;background-color:green;" id="sold">                  </label>
+                                    <button type="submit" onclick="sell()">Sell It</button>
+                                </td>
+
+                            </tr>
+                          </tbody>
+                      </table>
+                        </form>
+
+                    <script>
+                    function sell(){
+                      var id = document.getElementById("Id").value;
+                      if(id)
+                      {
+                          deleteBtn(id);
+                          document.getElementById("sold").innerHTML = " Selling Successful!";
+                      }
+                    }
+                    </script>
+                      </div>
+                    </div><!-- card -->
+                    <br/>
+
+
+
                     <div class="card pd-0 bd-0 shadow-base">
                       <div class="pd-x-30 pd-t-30 pd-b-15">
                         <div class="d-flex align-items-center justify-content-between">
@@ -230,6 +277,7 @@
                         <table class="list">
                         <thead>
                             <tr>
+                                <th>ID</th>
                                 <th>Product Name</th>
                                 <th>PDT Code</th>
                                 <th>Price</th>
