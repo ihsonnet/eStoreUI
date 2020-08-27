@@ -203,15 +203,78 @@
     <div class="br-mainpanel">
       <div class="br-pageheader pd-y-15 pd-l-20">
         <nav class="breadcrumb pd-0 mg-0 tx-12">
-          <a class="breadcrumb-item" href="../index.html">eStore</a>
+          <a class="breadcrumb-item" href="index.html">eStore</a>
           <span class="breadcrumb-item active">Reports</span>
         </nav>
       </div><!-- br-pageheader -->
-      <div class="pd-30">
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <div class="br-pagebody">
+        <div class="br-section-wrapper">
+
+          <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">Custommer Chart</h6>
+          <p class="mg-b-25 mg-lg-b-50">Below is the Customer info in chart presentation.</p>
+
+          <div class="row" style="display:none;">
+            <div class="col-xl-6">
+              <div id="morrisBar1" class="ht-200 ht-sm-300 bd"></div>
+            </div><!-- col-6 -->
+            <div class="col-xl-6 mg-t-20 mg-xl-t-0">
+              <div id="morrisBar2" class="ht-200 ht-sm-300 bd"></div>
+            </div><!-- col-6 -->
+          </div><!-- row -->
+
+          <div class="row tx-center">
+            <div class="col-lg-6">
+              <div class="pd-y-20 bd"><div id="morrisDonut1" class="ht-200 ht-sm-250"></div></div>
+            </div><!-- col-6 -->
+            <div class="col-lg-6 mg-t-20 mg-lg-t-0">
+              <div class="pd-y-20 bd"><div id="morrisDonut2" class="ht-200 ht-sm-250"></div></div>
+            </div><!-- col-6 -->
+          </div><!-- row -->
+
+          <div class="row mg-t-50">
+            <div class="col-xl-6">
+              <div id="morrisBar3" class="ht-200 ht-sm-300 bd"></div>
+            </div><!-- col-6 -->
+            <div class="col-xl-6 mg-t-20 mg-xl-t-0">
+              <div id="morrisBar4" class="ht-200 ht-sm-300 bd"></div>
+            </div><!-- col-6 -->
+          </div><!-- row -->
 
 
+
+          <!-- <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-t-80 mg-b-10">Line Chart</h6>
+          <p class="mg-b-25 mg-lg-b-50">Below is the basic line chart example.</p> -->
+
+          <div class="row" style="display:none;">
+            <div class="col-xl-6">
+              <div id="morrisLine1" class="ht-200 ht-sm-300 bd"></div>
+            </div><!-- col-6 -->
+            <div class="col-xl-6 mg-t-20 mg-xl-t-0">
+              <div id="morrisLine2" class="ht-200 ht-sm-300 bd"></div>
+            </div><!-- col-6 -->
+          </div><!-- row -->
+
+
+          <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-t-80 mg-b-10">Product Sell Chart</h6>
+          <p class="mg-b-25 mg-lg-b-50">Below is the Product Selling info in chart presentation.</p>
+
+          <div class="row">
+            <div class="col-xl-6">
+              <div id="morrisArea1" class="ht-200 ht-sm-300 bd"></div>
+            </div><!-- col-6 -->
+            <div class="col-xl-6 mg-t-20 mg-xl-t-0">
+              <div id="morrisArea2" class="ht-200 ht-sm-300 bd"></div>
+            </div><!-- col-6 -->
+          </div><!-- row -->
+
+
+          <!-- <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-t-80 mg-b-10">Donut Chart</h6>
+          <p class="mg-b-25 mg-lg-b-50">Below is the basic donut chart example.</p>
+ -->
+
+
+        </div><!-- br-section-wrapper -->
       </div><!-- br-pagebody -->
       <footer class="br-footer">
         <div class="footer-left">
@@ -243,14 +306,18 @@
     <!-- ########## END: MAIN PANEL ########## -->
 
     <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/jquery-ui/jquery-ui.js"></script>
     <script src="lib/popper.js/popper.js"></script>
     <script src="lib/bootstrap/bootstrap.js"></script>
     <script src="lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
     <script src="lib/moment/moment.js"></script>
-    <script src="lib/jquery-ui/jquery-ui.js"></script>
     <script src="lib/jquery-switchbutton/jquery.switchButton.js"></script>
     <script src="lib/peity/jquery.peity.js"></script>
+    <script src="lib/highlightjs/highlight.pack.js"></script>
+    <script src="lib/raphael/raphael.min.js"></script>
+    <script src="lib/morris.js/morris.js"></script>
 
     <script src="js/bracket.js"></script>
+    <script src="js/chart.morris.js"></script>
   </body>
 </html>
