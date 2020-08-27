@@ -14,6 +14,22 @@ function saveData() {
   return;
 }
 
+function updateData() {
+  let finame,laname;
+  let regiEmail,regiPass;
+  finame = document.getElementById("finame").value;
+  laname = document.getElementById("laname").value;
+  regEmail= document.getElementById("regiEmail").value;
+  regPass = document.getElementById("regiPass").value;
+
+
+  localStorage.setItem("fName",finame);
+  localStorage.setItem("lName",laname);
+  localStorage.setItem("regEmail",regiEmail);
+  localStorage.setItem("regPass",regiPass);
+  return;
+}
+
 function storeData() {
   let storeName,storeDes;
   storeName = document.getElementById("storeName").value;
