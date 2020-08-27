@@ -178,8 +178,8 @@ $(function(){
   new Morris.Donut({
     element: 'morrisDonut2',
     data: [
-      {label: "Men", value: 12},
-      {label: "Women", value: 30},
+      {label: "Men", value: 42},
+      {label: "Women", value: 17},
       {label: "Kids", value: 20},
       {label: "Infant", value: 25}
     ],
