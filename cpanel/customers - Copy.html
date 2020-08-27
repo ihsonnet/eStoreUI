@@ -44,7 +44,7 @@
     <link href="../assets/css/newstore.css" rel="stylesheet">
   </head>
 
-  <body onload="init()">
+  <body>
 
     <!-- ########## START: LEFT PANEL ########## -->
     <div class="br-logo"><a href=""><img style="width:150px; margin-left:10%" src="img/logo.png"></a></div>
@@ -190,7 +190,7 @@
             <div class="dropdown-menu dropdown-menu-header wd-200">
               <ul class="list-unstyled user-profile-nav">
                 <li><a href="profile.html"><i class="icon ion-ios-person"></i> Edit Profile</a></li>
-                <li><a href="settings.html"><i class="icon ion-ios-gear"></i> Settings</a></li>
+                <li><a href=""><i class="icon ion-ios-gear"></i> Settings</a></li>
                 <li><a href="../login.html"><i class="icon ion-power"></i> Log Out</a></li>
               </ul>
             </div><!-- dropdown-menu -->
@@ -226,7 +226,7 @@
                   </div>
                   <div class="pd-x-15 pd-b-15">
 
-                    <table class="list">
+                    <table class="list" id="employeeList">
                     <thead>
                         <tr>
                             <th>Full Name</th>
@@ -236,7 +236,7 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody id="tablerows">
+                    <tbody>
 
                     </tbody>
                 </table>
@@ -256,22 +256,22 @@
                   <form onsubmit="event.preventDefault();onFormSubmit();">
                     <div>
                         <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
-                        <input type="text" name="fullName" id="customerName">
+                        <input type="text" name="fullName" id="fullName">
                     </div>
                     <div>
                         <label>CMR Code</label>
-                        <input type="text" name="empCode" id="customerCode">
+                        <input type="text" name="empCode" id="empCode">
                     </div>
                     <div>
                         <label>Phone Number</label>
-                        <input type="text" name="salary" id="customerPhone">
+                        <input type="text" name="salary" id="salary">
                     </div>
                     <div>
                         <label>Address</label>
-                        <input type="text" name="city" id="customerAddress">
+                        <input type="text" name="city" id="city">
                     </div>
                     <div  class="form-action-buttons">
-                        <input type="submit" value="Submit" onclick="addBtn()"/>
+                        <input type="submit" value="Submit">
                     </div>
                 </form>
 
@@ -323,6 +323,6 @@
     <script src="lib/peity/jquery.peity.js"></script>
 
     <script src="js/bracket.js"></script>
-    <script src="js/customer-crud.js"></script>
+    <script src="js/customer-script.js"></script>
   </body>
 </html>

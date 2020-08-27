@@ -7,6 +7,10 @@ function init() {
       prepareTableCell(i, productList[i].productName, productList[i].productCode, productList[i].productPrice, productList[i].productCategory);
     }
   }
+  if(i)
+  {
+    document.getElementById('empty').style.display='none';
+  }
 }
 
 function addBtn() {
