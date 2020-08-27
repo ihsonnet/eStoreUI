@@ -353,6 +353,19 @@
                     const  firstname = localStorage.getItem("fName");
                     const  lastname = localStorage.getItem("lName");
                     const storeName = localStorage.getItem("storeName");
+
+                    const FirName = localStorage.getItem("fName");
+                    const LasName = localStorage.getItem("lName");
+                    const RegisEmail = localStorage.getItem("regEmail");
+                    const RegisPass = localStorage.getItem("regPass");
+                    const PhoneN = localStorage.getItem("phnNumber");
+
+                    document.getElementById('finame').setAttribute('value', FirName);
+                    document.getElementById('laname').setAttribute('value', LasName);
+                    document.getElementById('regiEmail').setAttribute('value', RegisEmail);
+                    document.getElementById('regiPass').setAttribute('value', RegisPass);
+                    document.getElementById('phnNumber').setAttribute('value', PhoneN);
+
                     const thestoreName = localStorage.getItem("storeName");
                     const storeDes = localStorage.getItem("storeDes");
                     const storeCat = localStorage.getItem("storeCat");

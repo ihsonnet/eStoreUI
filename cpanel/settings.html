@@ -229,11 +229,11 @@
                             <form>
                               <div>
                                   <label>Store Name</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
-                                  <input id="Storename" type="text" name="storeName" >
+                                  <input type="text" name="StoreName" id="StName" />
                               </div>
                               <div>
                                 <label for="name">Category</label>
-                                  <select id="storeCat" name="category">
+                                  <select id="StCat" name="category">
                                     <option value="Furniture">Furniture</option>
                                     <option value="Cloth & Fashion">Cloth & Fashion</option>
                                     <option value="Electronics">Electronics</option>
@@ -245,17 +245,16 @@
                               <div>
                                   <label>Description:</label>
                                   <!-- <input type="text" name="city" id="city"> -->
-                                  <input type="text" name="productCode" id="productCode">
+                                  <input type="text" required name="StoreDes" id="StDes">
                               </div>
 
                               <div>
                                   <label>Address</label>
-                                  <input type="text" name="productPrice" id="productPrice">
+                                  <input type="text" required name="StoreAdress" id="StAddress">
                               </div>
 
-                              <div  class="form-action-buttons">
-                                <button type="submit" onclick="UpdatestoreData()">Update</button>
-                              </div>
+
+                                <input type="submit" onclick="updatestoreData()" value="Update"/>
                           </form>
 
                           </div>
@@ -293,15 +292,23 @@
                   <div class="mg-b-2">Copyright &copy; 2017.<b>eStore</b> All Rights Reserved.<span style="display:none;" id="showlname"></span> <span id="showlname"></div>
 
                   <script>
+
                     const  fname = localStorage.getItem("fName");
                     const  lname = localStorage.getItem("lName");
                     const storeName = localStorage.getItem("storeName");
-                    const storeDes = localStorage.getItem("storeDes");
+                    const StooName = localStorage.getItem("storeName");
+                    const StoreDes = localStorage.getItem("storeDes");
                     const storeCat = localStorage.getItem("storeCat");
+                    const storeAddress = localStorage.getItem("storeAddress");
                     const storen = localStorage.getItem("storeName");
+                    document.getElementById('StName').setAttribute('value', StooName);
+                    document.getElementById('StDes').setAttribute('value', StoreDes);
+                    document.getElementById('StCat').setAttribute('value', storeCat);
+                    document.getElementById('StAddress').setAttribute('value', storeAddress);
                     document.getElementById("showfname").innerHTML= fname;
                     document.getElementById("showlname").innerHTML= lname;
                     document.getElementById("StoreName").innerHTML= storeName;
+                    document.getElementById("StName").innerHTML= "sadfghfhkg";
                     document.getElementById("storeDes").innerHTML= storeDes;
                     document.getElementById("storeCat").innerHTML= storeCat;
                     document.getElementById("showName").innerHTML = storen;
@@ -327,6 +334,6 @@
     <script src="lib/peity/jquery.peity.js"></script>
 
     <script src="js/bracket.js"></script>
-    <script src="js/settings.js"></script>
+    <script src="../assets/js/database.js"></script>
   </body>
 </html>
