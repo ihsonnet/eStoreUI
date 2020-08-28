@@ -29,7 +29,7 @@
     <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="author" content="ThemePixels">
 
-    <title>Profile | eStore.com</title>
+    <title id="storeTitle"></title>
 
     <!-- vendor css -->
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -281,9 +281,7 @@
                                 <div>
 
                                    <h3>
-<div id="fname">
-
-</div><div id="lname">
+<div id="fullnamee">
 
 </div>
                                    </h3>
@@ -371,16 +369,15 @@
                     const storeDes = localStorage.getItem("storeDes");
                     const storeCat = localStorage.getItem("storeCat");
                     const storen = localStorage.getItem("storeName");
+                    document.getElementById("storeTitle").innerHTML= "Profile | "+fname+" "+lname;
                     document.getElementById("showfname").innerHTML= fname;
                     document.getElementById("showlname").innerHTML= lname;
-                    document.getElementById("fname").innerHTML= firstname;
-                    document.getElementById("lname").innerHTML= lastname;
+                    document.getElementById("fullnamee").innerHTML= fname +" "+lname;
                     document.getElementById("showthename").innerHTML= thestoreName;
                     document.getElementById("StoreName").innerHTML= storeName;
                     document.getElementById("storeDes").innerHTML= storeDes;
                     document.getElementById("storeCat").innerHTML= storeCat;
                     document.getElementById("showName").innerHTML = storen;
-                    document.getElementById("storeTitle").innerHTML= "Dashboard | "+StoreName;
                   </script>
                 </div>
                 <div class="footer-right d-flex align-items-center">
